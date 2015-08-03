@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="registration-container">
+        {% if activation_error %}
+            <h3>{{ activation_error }}</h3>
+        {% else %}
+        <a class="btn btn-primary btn-facebook" href="{% url "social:begin" "facebook" %}">Register with Facebook</a>
+        <hr />
+        <h2>Register with email</h2>
+        <form method="post" action=".">
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+            {% endfor %}
+            {{ form.as_p }}
+            <input type="submit" value="Register">
+        </form>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -35,6 +35,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -45,6 +46,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (                    
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
+    'django.contrib.auth.context_processors.auth'
 )
 
 ROOT_URLCONF = 'simplelogin.urls'
@@ -91,3 +98,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, "..", "static")
 STATICFILES_DIRS = (
     ('site', os.path.join(BASE_DIR, "static")),
 )
+
+# Social Auth
+
+# These are the selected authentication backends (social)
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'social.backends.facebook.FacebookOAuth2',
+)
+
+SOCIAL_AUTH_FACEBOOK_KEY = '711186525675641'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'b3c543fc6db2d32eb87810ccd33b5bdd'
+
+#SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+#SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/accounts/profile/'

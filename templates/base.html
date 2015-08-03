@@ -1,17 +1,20 @@
-{% load staticfiles %}
-<!doctype html>
-<html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Insert Title Here</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-    	
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
 
-    </body>
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+	<head>
+		<title>Logus</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	</head>
+	<body>
+		<!-- Insert content here -->
+        {% block navbar %}
+        {% endblock navbar %}
+        <div id="content" class="container">
+        	{% block content %}{% endblock %}
+		</div>
+       
+	</body>
 </html>
