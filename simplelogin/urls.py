@@ -11,6 +11,8 @@ urlpatterns = patterns('',
     
     url(r'^logus/', TemplateView.as_view(template_name="logus.html")),
     url(r'^admin/', include(admin.site.urls)),
+  
+     #social auth
     url('', include('social.apps.django_app.urls', namespace='social'))
     
 )

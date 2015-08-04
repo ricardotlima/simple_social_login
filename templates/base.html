@@ -1,20 +1,23 @@
-
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static %}
 <html lang="en">
 	<head>
 		<title>Logus</title>
-
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<!-- styles include here -->
+		<link href="{{ STATIC_URL }}site/css/screen.css" media="screen, projection, print" rel="stylesheet" type="text/css" />
+		<link href="{{ STATIC_URL }}site/css/print.css" media="print" rel="stylesheet" type="text/css" />
+		<!--[if IE]>
+		<link href="{{ STATIC_URL }}site/css/ie.css" media="screen, projection, print" rel="stylesheet" type="text/css" />
+		<![endif]-->
 	</head>
 	<body>
 		<!-- Insert content here -->
-        {% block navbar %}
-        {% endblock navbar %}
         <div id="content" class="container">
         	{% block content %}{% endblock %}
 		</div>
-       
+       <!-- Insert js here -->
+       <script src="{{STATIC_URL}}site/js/jquery-1.11.3.min.js"></script>       
+       <script src="{{STATIC_URL}}site/js/bootstrap.min.js"></script>
 	</body>
 </html>
