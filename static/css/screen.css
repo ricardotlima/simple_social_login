@@ -8769,3 +8769,13 @@ button.close {
     display: none !important;
   }
 }
+/* line 4, ../../style/sass/screen.sass */
+body {
+  background-color: #eee;
+}
+
+/* line 7, ../../style/sass/screen.sass */
+#content .registration-container {
+  width: 150px;
+  margin: 200px auto 50px;
+}

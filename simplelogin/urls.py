@@ -12,14 +12,16 @@ urlpatterns = patterns('',
     url(r'^logus/', TemplateView.as_view(template_name="logus.html")),
     url(r'^admin/', include(admin.site.urls)),
   
-     #social auth
-    url('', include('social.apps.django_app.urls', namespace='social'))
+    #social auth
+    url('', include('social.apps.django_app.urls', namespace='social')),    
+    #logout
+    url(r'^logout/$', 'django.contrib.auth.views.logout', name='logout'),
     
 )
 
 #from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-# debug static and media fiels urls 
+# Debug static and media fiels urls 
 
 #if settings.DEBUG: 
     #urlpatterns = patterns('', 
@@ -27,7 +29,6 @@ urlpatterns = patterns('',
     #                       url(r'', include('django.contrib.staticfiles.urls')), 
     #                       ) + urlpatterns 
     #urlpatterns += staticfiles_urlpatterns()
-
-
+    
 
 
