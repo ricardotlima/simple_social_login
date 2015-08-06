@@ -8769,13 +8769,49 @@ button.close {
     display: none !important;
   }
 }
-/* line 4, ../../style/sass/screen.sass */
+@font-face {
+  font-family: "FontAwesome";
+  src: url('../fonts/FontAwesome.otf?1438880371') format('opentype'), url('../fonts/fontawesome-webfont.eot?1438880371') format('embedded-opentype'), url('../fonts/fontawesome-webfont.svg?1438880371') format('svg'), url('../fonts/fontawesome-webfont.ttf?1438880371') format('truetype'), url('../fonts/fontawesome-webfont.woff?1438880371') format('woff'), url('../fonts/fontawesome-webfont.woff2?1438880371') format('woff2');
+}
+/* line 9, ../../style/sass/partials/_fonts.sass */
+.fa {
+  font-family: "FontAwesome";
+}
+/* line 11, ../../style/sass/partials/_fonts.sass */
+.fa.fa-facebook:before {
+  content: "";
+}
+
+/* line 6, ../../style/sass/screen.sass */
 body {
   background-color: #eee;
 }
 
-/* line 7, ../../style/sass/screen.sass */
+/* line 9, ../../style/sass/screen.sass */
 #content .registration-container {
-  width: 150px;
-  margin: 200px auto 50px;
+  margin: 100px auto;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  background: white;
+  text-align: center;
+}
+/* line 19, ../../style/sass/screen.sass */
+#content .registration-container a {
+  margin: 110px auto 10px;
+}
+/* line 22, ../../style/sass/screen.sass */
+#content .registration-container a .fa-facebook {
+  font-style: normal;
+}
+/* line 24, ../../style/sass/screen.sass */
+#content .registration-container p {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+/* line 28, ../../style/sass/screen.sass */
+#content .registration-container p.intro-three {
+  text-align: right;
 }

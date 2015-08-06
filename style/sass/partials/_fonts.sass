@@ -1,2 +1,12 @@
 // font-face fonts
 // see http://compass-style.org/docs/reference/compass/css3/font_face/
+
+@import compass/css3
+
+ 
++font-face("FontAwesome", font-files("FontAwesome.otf", "fontawesome-webfont.eot", "fontawesome-webfont.svg", "fontawesome-webfont.ttf", "fontawesome-webfont.woff", "fontawesome-webfont.woff2"))
+
+.fa
+    font-family: "FontAwesome"
+    &.fa-facebook:before
+        content: "\f09a"

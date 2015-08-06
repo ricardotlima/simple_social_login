@@ -1,10 +1,29 @@
 // I gather this file is a starting point for the project.
 @import bootstrap
+@import partials/base
+@import partials/fonts
 
 body
-    background-color: #eee
+    background-color: $background_grey
 
-#content .registration-container
-    width: 150px
-    margin: 200px auto 50px
+#content .registration-container   
+    margin: 100px auto
+    padding: 10px
+    width: 300px
+    height: 300px
+    border-radius: 2px
+    box-shadow: 0 1px 2px $black_15
+    background: white
+    text-align: center
     
+    a
+        margin: 110px auto 10px
+
+        .fa-facebook
+            font-style: normal
+    p
+        color: $black_50
+        text-align: center    
+            
+        &.intro-three
+            text-align: right

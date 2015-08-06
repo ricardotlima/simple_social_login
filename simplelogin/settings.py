@@ -35,7 +35,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-        
+     
+     # python-social-auth app    
     'social.apps.django_app.default',
 )
 
@@ -123,6 +124,7 @@ AUTHENTICATION_BACKENDS = (
     'social.backends.facebook.FacebookOAuth2',
 )
 
+# Connect to Facebook with the App ID and App secret showed in the app's dashboard - developers.facebook 
 SOCIAL_AUTH_FACEBOOK_KEY = '711186525675641'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'b3c543fc6db2d32eb87810ccd33b5bdd'
 

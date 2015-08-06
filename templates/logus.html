@@ -1,18 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="registration-container">
-        {% if activation_error %}
-        
-            <h3>{{ activation_error }}</h3>
-        
-        {% else %}
-        
+        {% if activation_error %}        
+            <h3>{{ activation_error }}</h3>        
+        {% else %}        
 	        {% if request.user.is_authenticated %}
-	        	<a class="btn btn-primary btn-facebook" href="{% url "logout" %}?next={{ request.path }}">Log Out</a>
+	        	<a class="btn btn-primary btn-facebook" href="{% url "logout" %}?next={{ request.path }}">
+	        		Log Out
+	        	</a>	        	
+	        	<p class="intro-one">Welcome to Logus</p>
+	        	<p class="intro-one">a place where you can log in</p>
+	        	<p class="intro-two">or log out</p>
+	        	<p class="intro-three">Enjoy!</p>
 	        {% else %}
-	        	<a class="btn btn-primary btn-facebook" href="{% url "social:begin" "facebook" %}?next={{ request.path }}">Login with Facebook</a>
-	        {% endif %}
-        
+	        	<a class="btn btn-primary btn-facebook" href="{% url "social:begin" "facebook" %}?next={{ request.path }}">
+	        		Log In <i class="fa fa-facebook"></i>
+	        	</a>
+	        {% endif %}        
         {% endif %}
     </div>
 {% endblock %}
